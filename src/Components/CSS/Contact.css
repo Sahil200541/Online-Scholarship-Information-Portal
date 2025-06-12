@@ -1,0 +1,241 @@
+.contact {
+  padding: 4rem 0;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 3rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.info-card p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.info-card a {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.info-card a:hover {
+  color: var(--secondary-color);
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Status Message Styles */
+.status-message {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.status-message.success {
+  background: linear-gradient(135deg, #00cc66, #00994d);
+  color: #fff;
+}
+
+.status-message.error {
+  background: linear-gradient(135deg, #cc0000, #990000);
+  color: #fff;
+}
+
+/* Button Styles */
+.submit-button,
+.delete-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #0066cc, #004d99);
+  color: #fff;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.delete-button {
+  background: linear-gradient(135deg, #cc0000, #990000);
+  color: #fff;
+  margin-left: 1rem;
+}
+
+.delete-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(204, 0, 0, 0.2);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 0;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .delete-button {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .submit-button,
+  .delete-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+  .submit-button,
+  .delete-button {
+    width: 100%;
+    justify-content: center;
+  }
+} 
