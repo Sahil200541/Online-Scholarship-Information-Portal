@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/JSX/Navbar';
 import Footer from './Components/JSX/Footer';
@@ -30,31 +30,31 @@ function App() {
       <div className="App">
         <Routes>
           {/* Admin Auth Routes - Without AdminLayout */}
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin/register" element={<AdminRegister />} />
+          <Route exact path='/admin/login' element={<AdminLogin />} />
+          <Route exact path='/admin/register' element={<AdminRegister />} />
 
           {/* Admin Routes - Using AdminLayout */}
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route exact path='/admin' element={<AdminLayout />}>
             <Route index element={<AdminDashboard />} />
-            <Route path="login" element={<AdminLogin />} />
-            <Route path="register" element={<AdminRegister />} />
-            <Route path="manage-scholarships" element={<ManageScholarships />} />
-            <Route path="create-scholarship" element={<CreateScholarship />} />
-            <Route path="scholarships/:id" element={<ViewScholarship />} />
-            <Route path="edit-scholarship/:id" element={<EditScholarship />} />
-            <Route path="featured-scholarships" element={<FeaturedScholarships />} />
-            <Route path="user-queries" element={<ViewUserQuery />} />
-            <Route path="user-queries/:queryId" element={<ViewQueryDetails />} />
+            <Route exact path='login' element={<AdminLogin />} />
+            <Route exact path='register' element={<AdminRegister />} />
+            <Route exact path='manage-scholarships' element={<ManageScholarships />} />
+            <Route exact path='create-scholarship' element={<CreateScholarship />} />
+            <Route exact path='scholarships/:id' element={<ViewScholarship />} />
+            <Route exact path='edit-scholarship/:id' element={<EditScholarship />} />
+            <Route exact path='featured-scholarships' element={<FeaturedScholarships />} />
+            <Route exact path='user-queries' element={<ViewUserQuery />} />
+            <Route exact path='user-queries/:queryId' element={<ViewQueryDetails />} />
           </Route>
 
           {/* Auth Routes - Using AuthLayout */}
-          <Route path="/auth" element={<AuthLayout />}>
-            <Route path="login" element={<UserLogin />} />
-            <Route path="register" element={<UserRegister />} />
+          <Route exact path='/auth' element={<AuthLayout />}>
+            <Route exact path='login' element={<UserLogin />} />
+            <Route exact path='register' element={<UserRegister />} />
           </Route>
 
           {/* Profile Route - With Navbar but No Footer */}
-          <Route path="/profile" element={
+          <Route exact path='/profile' element={
             <>
               <Navbar />
               <main className="main-content">
@@ -64,7 +64,7 @@ function App() {
           } />
 
           {/* Scholarship Routes - With Navbar but No Footer */}
-          <Route path="/scholarships" element={
+          <Route exact path='/scholarships' element={
             <>
               <Navbar />
               <main className="main-content">
@@ -72,7 +72,7 @@ function App() {
               </main>
             </>
           } />
-          <Route path="/scholarship/:id" element={
+          <Route exact path='/scholarship/:id' element={
             <>
               <Navbar />
               <main className="main-content">
@@ -82,7 +82,7 @@ function App() {
           } />
 
           {/* Contact Route - With Navbar but No Footer */}
-          <Route path="/contact" element={
+          <Route exact path='/contact' element={
             <>
               <Navbar />
               <main className="main-content">
@@ -92,7 +92,7 @@ function App() {
           } />
 
           {/* About Route - With Navbar but No Footer */}
-          <Route path="/about" element={
+          <Route exact path='/about' element={
             <>
               <Navbar />
               <main className="main-content">
@@ -102,7 +102,7 @@ function App() {
           } />
 
           {/* Home Route - With Navbar and Footer */}
-          <Route path="/" element={
+          <Route exact path='/' element={
             <>
               <Navbar />
               <main className="main-content">
