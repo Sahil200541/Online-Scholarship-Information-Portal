@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Online-Scholarship-Information-Portal/static/css/main.d62c0e2d.css",
+    "main.js": "/Online-Scholarship-Information-Portal/static/js/main.f6781a1f.js",
+    "static/js/453.47d4953e.chunk.js": "/Online-Scholarship-Information-Portal/static/js/453.47d4953e.chunk.js",
+    "index.html": "/Online-Scholarship-Information-Portal/index.html",
+    "main.d62c0e2d.css.map": "/Online-Scholarship-Information-Portal/static/css/main.d62c0e2d.css.map",
+    "main.f6781a1f.js.map": "/Online-Scholarship-Information-Portal/static/js/main.f6781a1f.js.map",
+    "453.47d4953e.chunk.js.map": "/Online-Scholarship-Information-Portal/static/js/453.47d4953e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d62c0e2d.css",
+    "static/js/main.f6781a1f.js"
+  ]
+}
