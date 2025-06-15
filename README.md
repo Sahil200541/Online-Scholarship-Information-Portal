@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+Online Scholarship Information Portal
+-------------------------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An online web application that provides detailed information about various scholarships for students. The portal allows users to view scholarship listings, search and filter them, and access details like amount, eligibility, and application deadlines.
 
-## Available Scripts
+Features:
+---------
+- View a list of available scholarships
+- Search scholarships by keyword
+- See detailed information including:
+    - Scholarship Name
+    - Amount
+    - Eligibility
+    - Deadline
+    - Application Link
+- Fully responsive design (works on mobile, tablet, and desktop)
+- Beautiful UI with informative icons
+- Backend API integrated using Axios (if running in development mode)
 
-In the project directory, you can run:
+Technologies Used:
+------------------
+Frontend:
+- React JS (for building UI)
+- React Router DOM (for routing)
+- Axios (for API calls)
+- FontAwesome (for icons)
+- CSS (for styling)
+- GH-Pages (for deploying frontend to GitHub Pages)
 
-### `npm start`
+Backend (optional):
+- Node.js and Express.js (for API)
+- MongoDB (if storing dynamic data)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Icons Used (from FontAwesome):
+------------------------------
+- Graduation Cap Icon (fa-graduation-cap): For scholarship header
+- Search Icon (fa-search): For the search bar
+- Clock Icon (fa-clock): To indicate deadlines
+- Coins Icon (fa-coins): For scholarship amount
+- Link Icon (fa-link): For external application link
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Project Folder Structure (Frontend):
+------------------------------------
+src/
+├── Components/
+│   ├── JSX/         -> Contains all React components
+│   └── CSS/         -> Contains component-specific CSS files
+├── App.js
+├── index.js
+├── ...
 
-### `npm test`
+Installation Instructions:
+--------------------------
+1. Clone the repository:
+   git clone https://github.com/Sahil200541/Online-Scholarship-Information-Portal.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Move into the project directory:
+   cd Online-Scholarship-Information-Portal
 
-### `npm run build`
+3. Install dependencies:
+   npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Running the Project Locally:
+----------------------------
+Start the development server:
+   npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Runs the app in development mode at:
+   http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Proxy Support for Local Backend:
+--------------------------------
+To enable local API communication, this line is added to package.json:
+   "proxy": "http://localhost:5000"
 
-### `npm run eject`
+This allows API calls like:
+   axios.get("/api/scholarships")
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+instead of hardcoding the full localhost URL.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Deployment:
+-----------
+The project is deployed at:
+https://Sahil200541.github.io/Online-Scholarship-Information-Portal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend Hosting:
+----------------
+If backend is hosted (e.g., on Render), update Axios URLs to use the hosted API:
+   https://your-backend.onrender.com/api/scholarships
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Developer Info:
+---------------
+Name: Sahil Laha
+Role: Frontend Developer & BCA Student
+GitHub: https://github.com/Sahil200541
 
-## Learn More
+License:
+--------
+This project is licensed under the MIT License.
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you’d like a second version with backend API details too or `.env` instructions for live URL switching.
